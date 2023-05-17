@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Phoenix Tracing</title>
+
+    <link href='https://unpkg.com/boxicons@2.1.2/css/boxicons.min.css' rel='stylesheet'>
+
+    <!-- Global stylesheets -->
+    <link href="/Content/assets/css/bootstrap.min.css" rel="stylesheet" type="text/css">
+    <!-- /global stylesheets -->
+    <!-- Core JS files-->
+    <script src="/Content/global_assets/js/main/jquery.min.js"></script>
+    <script src="/Content/global_assets/js/main/bootstrap.bundle.min.js"></script>
+    <script src="/Content/global_assets/js/plugins/loaders/blockui.min.js"></script>
+
+    <script src="/Content/assets/js/app.js"></script>
+    <script src="/Content/global_assets/js/demo_pages/login.js"></script>
+    <!-- /theme JS files -->
+
+    <link href="/Content/Login_Register/css/StyleSheet1.css" rel="stylesheet" />
+    <link href="/Content/Login_Register/css/colorPalet.css" rel="stylesheet" />
+    <link rel="stylesheet" type="text/css">
+    <link href="colorPalet.css" rel="stylesheet" />
+    <link href="StyleSheet1.css" rel="stylesheet" />
+</head>
+
+<body class="">
+    <div class="arrow">
+        <div class="arrow-left"> <div></div> </div>
+    </div>
+    <div class="container arkaplan-turuncu" id="container">
+        <div class="form-container sign-up-container">
+            <form action="#">
+                <h1>Hesap Oluştur</h1>
+                <!--<span> Giriş Yap </span>-->
+                <input type="text" placeholder="İsim" id="reg_name" required />
+                <input type="text" placeholder="Soyisim" id="reg_surname" required />
+                <input type="email" placeholder="Email" id="reg_mail" required />
+                <input type="password" placeholder="Şifre" id="reg_pass" name="password" required />
+                <i id="p1" class='bx bxs-lock-alt' onclick="myFunction()"></i>
+                <input type="text" placeholder="Telefon Numarası" id="reg_phone" required />
+                <button id="SignUp">Hesap Oluştur</button>
+            </form>
+        </div>
+        <div class="form-container sign-in-container">
+            <form action="#" id="loginForm">
+                <h1>Giriş Yap</h1>
+                <!--<span> Yeni Hesap Oluştur </span>-->
+                <input type="email" placeholder="Email" id="mail" name="mail" required />
+                <input type="password" placeholder="Şifre" id="pass" name="password" required>
+                <i id="p2" class='bx bxs-lock-alt' onclick="myFunction2()"></i>
+                <a href="#">Şifremi unuttum</a>
+                <button id="SignIn">Giriş Yap</button>
+            </form>
+        </div>
+        <div class="overlay-container">
+            <div class="overlay">
+                <div class="overlay-panel overlay-left">
+                    <img src="logo.png" width="100" height="100" />
+                    <h1 style="color: #323232; margin-block-end: 25px; margin-block-start: 20px;" class="yazi-koyu-gri">Phoenix Tracing</h1>
+                    <!--<p style="color:#323232">Hesabınıza giriş yapmak için butona tıklayın!</p>-->
+                    <button style="background-color:#323232; color:#FFFFFF; border:none"
+                            class="ghost" id="signIn">
+                        Giriş Yap
+                    </button>
+                </div>
+                <div class="overlay-panel overlay-right">
+                    <img src="logo.png" width="100" height="100" />
+                    <h1 style="color: #323232; margin-block-end: 25px; margin-block-start: 20px;">Phoenix Tracing</h1>
+                    <!--<p style="color:#323232">Yeni Hesap Oluşturun</p>-->
+                    <button style="background-color:#323232; color:#FFFFFF; border:none"
+                            class="ghost" id="signUp">
+                        Hesap Oluştur
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="/Content/Login_Register/javascript/JavaScript.js"></script>
+    <script src="/Content/Login_Register/JS/SignIn.js"></script>
+    <script src="/Content/Login_Register/JS/SignUp.js"></script>
+    <script src="JavaScript.js"></script>
+</body>
+
+</html>

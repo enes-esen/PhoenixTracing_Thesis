@@ -1,0 +1,18 @@
+﻿@model IEnumerable<Phoenix_Tracing.Models.TotalWork.Operation_total>
+
+@if (Model != null)
+{
+    <div class="box">
+        <div class="right-side">
+            <div class="box-topic">Toplam İş Talebi</div>
+            <div class="number">
+                @foreach (var item in Model)
+                {
+                    @*@item.operationTotal*@
+                    <p id="operation_total">@item.operationTotal</p>
+                }
+            </div>
+        </div>
+        <i class='bx bxs-briefcase-alt-2 cart'></i>
+    </div>
+}

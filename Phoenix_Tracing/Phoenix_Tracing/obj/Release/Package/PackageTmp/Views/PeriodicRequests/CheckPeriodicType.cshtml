@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Phoenix_Tracing.Models.Periodic_request_types>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <option value="@item.type_id">@item.name</option>
+    }
+}

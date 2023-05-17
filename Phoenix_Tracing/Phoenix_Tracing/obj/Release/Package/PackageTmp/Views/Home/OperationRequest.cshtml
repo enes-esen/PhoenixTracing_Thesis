@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Phoenix_Tracing.Models.Operation_request>
+@if (Model != null)
+{
+    <div class="boxes2 box">
+        <div class="title">İş Taleplerim</div>
+        <div class="details">
+            <ul class="details2">
+                <li class="topic">İş Konusu</li>
+                @foreach (var item in Model)
+                {
+                    <li><a href="#">@item.name</a></li>
+                }
+            </ul>
+            <ul class="details2 text-over">
+                <li class="topic">Adres Başlığı</li>
+                @foreach (var item in Model)
+                {
+                    <li><a href="#">@item.address_name</a></li>
+                }
+            </ul>
+            <ul class="details2 text-over">
+                <li class="topic">Detay</li>
+                @foreach (var item in Model)
+                {
+                    <li><a href="#">@item.detail</a></li>
+                }
+            </ul>
+            <ul class="details2 text-over">
+                <li class="topic">Durumu</li>
+                @foreach (var item in Model)
+                {
+                    <li><a href="#">@item.status</a></li>
+                }
+            </ul>
+        </div>
+        <div class="button">
+            <a href="~/OperationRequestList/Index">Tamamını Görüntüle</a>
+        </div>
+        <div class="button">
+            <a href="~/OperationRequests/Index">İş Talebinde Bulun</a>
+        </div>
+    </div>
+}

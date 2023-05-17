@@ -1,0 +1,8 @@
+﻿@model IEnumerable<Phoenix_Tracing.Models.Addresses>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <option value="@item.address_id">@item.name</option>
+    }
+}

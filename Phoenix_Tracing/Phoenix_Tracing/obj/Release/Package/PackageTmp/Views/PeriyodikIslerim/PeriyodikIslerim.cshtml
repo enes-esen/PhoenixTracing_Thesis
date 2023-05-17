@@ -1,0 +1,79 @@
+﻿@model IEnumerable<Phoenix_Tracing.Models.PeriyodikIslerim>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="details">
+            <div class="container2">
+
+                <details class="akerdion">
+                    <summary>
+                        @*<input type="checkbox" name="periodic_request_id" id="periodic_request_id" class="periodic_request_id" value="@item.address_id"/>  @item.name*@
+                        @*<input type="radio"  value="@item.job_id"/>*@
+
+                        <div class="text-over">
+                            @item.per_job_name
+                        </div>
+                        <h3> @item.per_job_status_name </h3>
+
+                    </summary>
+
+                    <div class="leftSide">
+                        <div class="deepDetail"> İsim </div>
+                        <p class="deepDetail2">@Session["UserName"]</p>
+                        <div class="deepDetail"> Soyisim </div>
+                        <p class="deepDetail2"> @Session["UserSurname"] </p>
+                        <div class="deepDetail"> E-mail </div>
+                        <p class="deepDetail2"> @Session["mail"] </p>
+
+                        <div class="deepDetail"> Adres </div>
+                        <p class="deepDetail2">@item.address_name</p>
+
+                        <div class="deepDetail"> Telefon Numarası </div>
+                        <p class="deepDetail2"> @item.address_phone </p>
+
+                        <div class="deepDetail"> Tarih </div>
+                        <p class="deepDetail2"> İlk bakım tarihi: @item.per_request_date.ToString()</p>
+                        <p class="deepDetail2"> Sonraki bakım tarihi: @item.per_request_afterDate.ToString() </p>
+
+                        <div class="deepDetail"> Konu </div>
+                        <p class="deepDetail2">@item.per_job_name </p>
+                    </div>
+
+                    <div class="rightSide">
+
+                        @*<div class="deepDetail"> İş Tipi</div>
+                        <p class="deepDetail2"> @item.per_request_type_name</p>*@
+
+                        <div class="deepDetail"> İş Kodu</div>
+                        <p class="deepDetail2" id="period_job_id"> @item.job_id</p>
+
+                        <div class="deepDetail"> Periyod </div>
+                        <p class="deepDetail2"> Periyod süresi: @item.per_request_period.ToString()  </p>
+                        @*<p class="deepDetail2"> Sonraki bakım tarihi: @item.afterDate.ToString() </p>*@
+
+                        <div class="deepDetail"> Mesaj </div>
+                        <p class="deepDetail2">@item.per_job_detail</p>
+
+                        <div class="deepDetail" id="@item.job_id">Yapılan İşlemler</div>
+                        <ul>
+                            @*<li>@item.job_status_name</li>*@
+                            <li>
+                                @*<p class="deepDetail3">steplerde done 1 olanlar</p>*@
+                            </li>
+                        </ul>
+
+                        <div class="deepDetail" id="@item.job_id"> Yapılacak İşlemler </div>
+                        <ul>
+                            @*@Html.Action("YapilacakIslemler", "PeriyodikIslerim")*@
+                            <li>
+                                @*<p class="deepDetail3">steplerde done 0 olanlar</p>*@
+                            </li>
+                        </ul>
+                    </div>
+                </details>
+
+            </div>
+        </div>
+    }
+}

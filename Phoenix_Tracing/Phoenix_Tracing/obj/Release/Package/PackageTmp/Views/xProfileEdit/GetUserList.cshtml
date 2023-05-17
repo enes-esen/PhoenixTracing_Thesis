@@ -1,0 +1,31 @@
+﻿@model IEnumerable<Phoenix_Tracing.Models.Users>
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <fieldset>
+            <p> Ad </p>
+            <input id="userName" value="@item.name" type="text" tabindex="1" required autofocus>
+        </fieldset>
+
+        <fieldset>
+            <p> Soyad </p>
+            <input id="userSurname" value="@item.surname" type="text" tabindex="2">
+            @*required*@
+        </fieldset>
+
+        <fieldset>
+            <p> Telefon numarası </p>
+            <input id="userPhone" 
+                   type="text"
+                   maxlength="11" minlenght="11" tabindex="3"
+                   value="@item.phone"
+                   onkeypress=" return(event.charCode != 8 && event.charCode == 0 || (event.charCode>= 48 && event.charCode <= 57))" />
+        </fieldset>
+
+        <fieldset>
+            <p> E-mail </p>
+            <input id="userMail" value="@item.mail" type="text" tabindex="4">
+        </fieldset>
+    }
+}

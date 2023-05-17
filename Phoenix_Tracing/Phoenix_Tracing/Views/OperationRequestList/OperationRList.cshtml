@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Phoenix_Tracing.Models.Operation_request> 
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="details">
+            <div class="container2">
+        
+                <details class="akerdion">
+                    <summary>
+                        <input type="radio" name="operation_request_id" value="@item.request_id" />
+                        <div class="text-over">
+                            @item.name
+                        </div>
+                        
+                        <h3> @item.status </h3>
+                    </summary>
+
+                    @*<summary><input type="checkbox" />  @item.name<h3> @item.status </h3></summary>*@
+
+                    <div class="leftSide">
+                        <div class="deepDetail"> İsim </div>
+                        <p class="deepDetail2">@Session["UserName"]</p>
+                        <div class="deepDetail"> Soyisim </div>
+                        <p class="deepDetail2">@Session["UserSurname"]</p>
+                        <div class="deepDetail"> E-mail </div>
+                        <p class="deepDetail2">@Session["mail"]</p>
+                        <div class="deepDetail"> Adres </div>
+                        <p class="deepDetail2">@item.address_name</p>
+                        <div class="deepDetail"> Telefon Numarası </div>
+                        <p class="deepDetail2">@item.address_phone</p>
+
+                        <div class="deepDetail"> Tarih </div>
+                        <p class="deepDetail2"> @item.date.ToString() </p>
+                    </div>
+
+                    <div class="rightSide">
+                        <div class="deepDetail"> Konu </div>
+                        <p class="deepDetail2"> @item.name</p>
+                        <div class="deepDetail"> İş Tipi </div>
+                        <p class="deepDetail2"> @item.request_name</p>
+                        <div class="deepDetail"> Mesaj </div>
+                        <p class="deepDetail2">
+                            @item.detail
+                        </p>
+                        <div class="deepDetail">Yapılan İşlemler</div>
+                        <ul>
+                            @*<li>@item.job_status_name</li>*@
+                            <li>
+                                @*<p class="deepDetail3">steplerde done 1 olanlar</p>*@
+                            </li>
+                        </ul>
+
+                        <div class="deepDetail"> Yapılacak İşlemler </div>
+                        <ul>
+                            @*@Html.Action("YapilacakIslemler", "PeriyodikIslerim")*@
+                            <li>
+                                @*<p class="deepDetail3">steplerde done 0 olanlar</p>*@
+                            </li>
+                        </ul>
+
+                    </div>
+                </details>
+        
+            </div>
+        </div>
+
+    }
+}

@@ -1,0 +1,28 @@
+
+.arkaplan-turuncu {
+    /*background-color: #ff6600;*/
+    background-color: #FFA000;
+}
+
+.arkaplan-siyah {
+    background-color: #141414;
+}
+
+.arkaplan-koyu-gri {
+    background-color: #323232;
+}
+
+.button-overlay {
+    border-radius: 50px;
+    border: 1px solid #D18400;
+    /*background-color: #FF4B2B;*/
+    background-color: #323232;
+    color: #FFFFFF;
+    /*color: #303030;*/
+    font-size: 12px;
+    font-weight: bold;
+    padding: 12px 45px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    transition: transform 80ms ease-in;
+}

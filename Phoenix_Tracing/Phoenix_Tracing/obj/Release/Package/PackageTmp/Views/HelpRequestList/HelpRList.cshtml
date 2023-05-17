@@ -1,0 +1,43 @@
+﻿@model IEnumerable<Phoenix_Tracing.Models.Help_request>
+
+@if (Model != null)
+{
+    foreach (var item in Model)
+    {
+        <div class="details">
+            <div class="container2">
+                <details class="akerdion">
+                    <summary > 
+                        @*<input type="checkbox" />*@  
+                        <div class="text-over">
+                            @item.name
+                        </div>
+                        <h3> @item.statusName </h3> 
+                    </summary>
+
+                    <div class="leftSide">
+                        <div class="deepDetail"> İsim </div>
+                        <p class="deepDetail2">@Session["UserName"]</p>
+                        <div class="deepDetail"> Soyisim </div>
+                        <p class="deepDetail2"> @Session["UserSurname"] </p>
+                        <div class="deepDetail"> E-mail </div>
+                        <p class="deepDetail2">@Session["mail"]</p>
+                        <div class="deepDetail"> Telefon Numarası </div>
+                        <p class="deepDetail2"> @Session["UserPhone"] </p>
+                        <div class="deepDetail"> Tarih </div>
+                        <p class="deepDetail2"> İşlem Tarihi: @item.date.ToString() </p>
+                    </div>
+
+                    <div class="rightSide">
+                        <div class="deepDetail"> Konu </div>
+                        <p class="deepDetail2"> @item.name</p>
+                        <div class="deepDetail"> Mesaj </div>
+                        <textarea style="width: 100%; height: auto; border: none; background:#FFF; padding:15px; resize:none; font-family:Poppins, sans-serif; font-size:15px"  disabled>@item.detail</textarea>
+                        @*<p class="deepDetail2">@item.detail</p>*@
+
+                    </div>
+                </details>
+            </div>
+        </div>
+    }
+}
